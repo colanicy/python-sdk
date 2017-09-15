@@ -27,6 +27,7 @@ class File(object):
 
     """an object representing a local file"""
     path = None
+
     content = None
 
     def __init__(self, path):
@@ -70,7 +71,7 @@ class APIError(Exception):
 class API(object):
     key = None
     secret = None
-    server = 'https://api-cn.faceplusplus.com/facepp/v3/'
+    server = 'https://api-cn.faceplusplus.com/humanbodypp/beta/'
 
     decode_result = True
     timeout = None
@@ -123,7 +124,7 @@ def _setup_apiobj(self, api, path):
 
 class _APIProxy(object):
     _api = None
-    """underlying :class:`API` object"""
+    """underlying :class:`API`object"""
 
     _urlbase = None
 
@@ -261,18 +262,8 @@ def _print_debug(msg):
 
 _APIS = [
     '/detect',
-    '/compare',
-    '/search',
-    '/faceset/create',
-    '/faceset/addface',
-    '/faceset/removeface',
-    '/faceset/update',
-    '/faceset/getdetail',
-    '/faceset/delete',
-    '/faceset/getfacesets',
-    '/face/analyze',
-    '/face/getdetail',
-    '/face/setuserid'
+    '/segment',
+    '/gesture',
 ]
 
 _APIS = [i.split('/')[1:] for i in _APIS]

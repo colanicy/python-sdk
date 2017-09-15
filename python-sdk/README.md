@@ -14,10 +14,7 @@ and you will drop into a python shell, where you can write something like:
 
 Note that `api` here is a global variable.
 
-## 2. call.py
-This is a comprehensive demo for Face++ APIs. See the comments in the source
-code for details.
 
-## 3. facepp.py
+## 2. facepp.py
 
 This is the underlying API implementation.
